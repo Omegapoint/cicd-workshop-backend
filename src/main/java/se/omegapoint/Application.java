@@ -1,19 +1,15 @@
 package se.omegapoint;
 
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.SpringApplication;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.boot.actuate.system.ApplicationPidFileWriter;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.system.ApplicationPidFileWriter;
 
-@ComponentScan
-@EnableAutoConfiguration
+@SpringBootApplication
 public class Application {
 
     public static void main(String[] args) {
-        SpringApplication springApplication =
-                new SpringApplication(Application.class);
-        springApplication.addListeners(
-                new ApplicationPidFileWriter("app.pid"));
+        SpringApplication springApplication = new SpringApplication(Application.class);
+        springApplication.addListeners(new ApplicationPidFileWriter("app.pid"));
         springApplication.run(args);
     }
 }
