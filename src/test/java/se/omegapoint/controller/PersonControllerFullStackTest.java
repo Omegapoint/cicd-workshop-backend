@@ -28,7 +28,7 @@ public class PersonControllerFullStackTest {
 
     @Before
     public void setUp() throws Exception {
-        this.base = new URL("http://localhost:" + port + "/Persons.json");
+        this.base = new URL("http://localhost:" + port + "/personel.json");
         template = new TestRestTemplate();
     }
 

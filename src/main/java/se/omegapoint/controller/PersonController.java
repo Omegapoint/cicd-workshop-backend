@@ -15,13 +15,13 @@ import java.util.List;
 @RestController
 public class PersonController {
 
-    @RequestMapping("/Persons.json")
+    @RequestMapping("/personel.json")
     public List<Person> getPersons() {
         return retrievePersons();
     }
 
     private List<Person> retrievePersons() {
-        Resource personsResource = new ClassPathResource("data/persons.json");
+        Resource personsResource = new ClassPathResource("data/personel.json");
         ObjectMapper mapper = new ObjectMapper();
         List<Person> persons = new ArrayList<Person>();
         try {
