@@ -1,5 +1,5 @@
 #!/bin/bash
-JARFile="cicd-lab-backend-1.0.jar"
+JARFile="cicd-workshop-backend-1.0.jar"
 PIDFile="app.pid"
 PID="-1"
 NOPID="-1"
