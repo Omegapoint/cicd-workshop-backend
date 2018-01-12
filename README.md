@@ -1,19 +1,19 @@
-# cicd-workshop-backend
-Backend application for CI/CD-workshop
+# Example application for the CI/CD workshop
 
-## Build and start
+A basic Spring Boot application with a simple api.
 
-Build:
+## Build
 
-	$ mvn clean package
-	
-Start application:
+Build a fat jar using maven:
 
-	$ cd target	
-	$ ../startscript/application.sh start
-	
-application.sh-script for starting, stopping and displaying status
+`mvn clean package`
 
-    $ ./application.sh [start|stop|restart|debug|status]
+Build a docker image with the fat jar:
 
-Application log in app.log
+`docker build -t cicd-workshop-backend .`
+
+## Run
+
+Run the application as a docker container:
+
+`docker run cicd-workshop-backend`
