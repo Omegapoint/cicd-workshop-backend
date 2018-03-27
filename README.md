@@ -16,6 +16,6 @@ Build a docker image with the fat jar:
 
 Run the application as a docker container:
 
-`docker run cicd-workshop-backend`
+`docker run -p 8080:8080 cicd-workshop-backend`
 
 The application should then respond at `http://localhost:8080/personel.json`
